@@ -32,7 +32,6 @@ x86_64)
 ;;
 esac
 Cloud_Ver="$(cat /tmp/Github_Tags | egrep -o "${Firmware_COMP1}-${Firmware_COMP2}-${CURRENT_DEVICE}-[0-9]+.*?[0-9]+${Firmware_SFX}" | awk 'END {print}' | egrep -o '[a-zA-Z0-9_-]+.*?[0-9]+')"
-echo "cloud: ${Cloud_Ver}"
 upda_day="${Cloud_Ver##*${CURRENT_DEVICE}-}"
 upda_day1="${upda_day%-*}"
 upda_day2="${upda_day#*-}"
